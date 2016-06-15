@@ -8,12 +8,12 @@ How To Run:
 
 (2) setwd("dir including source codes").
 
-(3) source("demo_DNILMF.R")
+(3) source("demo_DNILMF.R") ## GPCR data was used as an example
 
 These codes were tested on Windows 7, but should also work on Linux.
 
 For any problem about these codes, please feel free to contact Dr. Ming Hao at: kevin.m.hao@gmail.com.
 
-References:
+Reference:
 
 [1] M Hao, et al., Predicting drug-target interactons by dual-network integrated logistic matrix factorization (submitted).
