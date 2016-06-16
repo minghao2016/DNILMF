@@ -4,9 +4,9 @@ The R codes were used to predict drug-target interactions (DTI) by the proposed 
 
 How To Run:
 
-(1) Install required packages.
+(1) Install required packages
 
-(2) setwd("dir including source codes").
+(2) setwd("dir including source codes")
 
 (3) source("demo_DNILMF.R") ## GPCR data was used as an example
 
