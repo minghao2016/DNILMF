@@ -5,7 +5,7 @@ setwd("C:/Users/kevin/Desktop/DNILMFcvByRowCvByCol/")
 
 
 ## current data set name
-db <- "en"
+db <- "gpcr"
 
 switch (db,
         en = {
