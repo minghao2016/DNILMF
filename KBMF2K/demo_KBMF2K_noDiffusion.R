@@ -1,6 +1,6 @@
 
 ## rm(list = ls())
-setwd("YourDir/KBMF2k/")
+setwd("YourDir/KBMF2K/")
 
 
 # current data set name
