@@ -1,4 +1,5 @@
-In this file, one can check the benefit from diffused kernels for KBMF2K model.
+In this file, one can check the benefit from diffused kernels for the KBMF2K model.
+Please enter this folder.
 
 Taking NR as an example:
 
