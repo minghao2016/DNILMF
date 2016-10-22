@@ -1,7 +1,7 @@
 
 
-rm(list = ls())
-setwd("C:\\Users\\kevin\\Desktop\\newDrugNewTargetPrediction\\NRLMF")
+## rm(list = ls())
+setwd("YourDir\\newDrugNewTargetPrediction\\NRLMF")
 
 ## current data set name
 db <- "gpcr"
