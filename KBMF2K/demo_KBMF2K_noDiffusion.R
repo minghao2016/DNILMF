@@ -1,6 +1,6 @@
 
-rm(list = ls())
-setwd("C:/Users/kevin/Desktop/KBMF2k/")
+## rm(list = ls())
+setwd("YourDir/KBMF2k/")
 
 
 # current data set name
