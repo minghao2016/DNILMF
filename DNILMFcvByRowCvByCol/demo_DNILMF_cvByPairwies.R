@@ -1,11 +1,11 @@
 
 
-rm(list = ls())
-setwd("C:/Users/kevin/Desktop/DNILMFcvByRowCvByCol/")
+## rm(list = ls())
+setwd("YourDir/DNILMFcvByRowCvByCol/")
 
 
 ## current data set name
-db <- "en"
+db <- "gpcr"
 
 switch (db,
   en = {
