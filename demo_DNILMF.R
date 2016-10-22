@@ -4,7 +4,7 @@
 ## integrated logistica matrix factorization
 
 ## rm(list = ls())
-## setwd("D:\\CodesForPublications\\DNILMF")
+## setwd("YourDir\\DNILMF")
 
 # current data set name
 db <- "gpcr"
