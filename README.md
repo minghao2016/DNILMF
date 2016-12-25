@@ -16,4 +16,4 @@ For any problem about these codes, please feel free to contact Dr. Ming Hao at: 
 
 Reference:
 
-[1] M Hao, et al., Predicting drug-target interactons by dual-network integrated logistic matrix factorization (submitted).
+[1] M Hao, et al., Predicting drug-target interactons by dual-network integrated logistic matrix factorization (accepted).
