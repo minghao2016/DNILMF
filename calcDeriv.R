@@ -44,7 +44,10 @@ calcDeriv <- function(
   
   M <- 1 + cY - Y
   
-  P <- M / (1 + E) * E
+  # 2017-7-18, numerical stability
+  ##P <- M / (1 + E) * E
+  sigmoidRes <- sigmoid(A)
+  P <- M * sigmoidRes
   
   if (isGradU) {
     YV <- Y %*% V
