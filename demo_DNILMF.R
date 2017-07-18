@@ -85,7 +85,7 @@ rSourceNames <- c("doCrossValidation.R",
 rSN <- lapply(rSourceNames, source, verbose = FALSE)
 
 ## sourceCPP required C++ files
-cppSourceNames <- c("fastKF.cpp", "fastKgipMat.cpp")
+cppSourceNames <- c("fastKF.cpp", "fastKgipMat.cpp", "log1pexp.cpp", "sigmoid.cpp")
 cppSN <- lapply(cppSourceNames, sourceCpp, verbose = FALSE)
 
 
