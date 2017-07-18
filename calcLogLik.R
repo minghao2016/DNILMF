@@ -41,7 +41,10 @@ calcLogLik <- function(
   
   M <- thisAlpha * UVt + thisBeta * (Sd %*% UVt) + thisGamma * (UVt %*% St)
 
-  LL <- sum(cY * M) - sum((1 + cY - Y) * log(1 + exp(M))) -
+  # 2017-07-18, numerical stability
+  log1pexpRes <- log1pexp(M)
+  
+  LL <- sum(cY * M) - sum((1 + cY - Y) * log1pexpRes) -
     0.5 * lamU * (base::norm(U, "F") ^ 2) - 0.5 * lamV * (base::norm(V, "F") ^ 2)
   
   return(LL)
