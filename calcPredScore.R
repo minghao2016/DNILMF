@@ -98,11 +98,15 @@ calcPredScore <- function(U,
     UnewVnewt <- Unew %*% Vnewt
 
     val <- thisAlpha * UnewVnewt + thisBeta * (simDrug %*% UnewVnewt) + thisGamma * (UnewVnewt %*% simTarget) 
-    testSetIndex <- cbind(testIndexRow, testIndexCol)
-    val <- val[testSetIndex]
     
     # score from val
-    score <- exp(val) / (1 + exp(val))
+    ##score <- exp(val) / (1 + exp(val))
+    # 2017-07-18, numerical stability
+    score <- sigmoid(val)
+    
+    testSetIndex <- cbind(testIndexRow, testIndexCol)
+    score <- score[testSetIndex]
+    
     result <- calAUPR(testLabel, score)
   } else {  # K = 0 condition
     # cat("without K smoothing! \n")
@@ -110,10 +114,15 @@ calcPredScore <- function(U,
     Vt <- t(V)
     UVt <- U %*% Vt
     val <- thisAlpha * UVt + thisBeta * (simDrug %*% UVt) + thisGamma * (UVt %*% simTarget) 
-    testSetIndex <- cbind(testIndexRow, testIndexCol)
-    val <- val[testSetIndex]
+    
     # score
-    score <- exp(val) / (1 + exp(val))
+    ##score <- exp(val) / (1 + exp(val))
+    # 2017-07-18, numerical stability
+    score <- sigmoid(val)
+    
+    testSetIndex <- cbind(testIndexRow, testIndexCol)
+    score <- score[testSetIndex]
+    
     result <- calAUPR(testLabel, score)
   }
   return(result)
