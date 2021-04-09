@@ -147,9 +147,11 @@ for (tt in 1:ttimes) {
       Yc <- inferZeros(t(Y), st, K = K1)
       KgipD <- fastKgipMat(Yr, 1)
       KgipT <- fastKgipMat(Yc, 1)
-      sd <- fastKF(KgipD, sd, 3, 2)
-      st <- fastKF(KgipT, st, 3, 2)
-      lap <- constrNeig(sd, st, K = K1)
+      #############################################
+      sd_temp <- fastKF(KgipD, sd, 3, 2)
+      st_temp <- fastKF(KgipT, st, 3, 2)
+      lap <- constrNeig(sd_temp, st_temp, K = K1)
+      #############################################
       simD <- lap$simD
       simT <- lap$simT
       ## use AdaGrid to update U and V
