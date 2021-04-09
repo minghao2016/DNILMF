@@ -1,5 +1,10 @@
 # DNILMF
 
+2021-04-09
+
+I modified the demo_DNILMF.R file which originally used the information at time (t - 1) when computing similarity matrix at time t in cv. The better way is to compute similarity matrix in each fold independently thanks to Dr. Soheil Jahangiri who noted this issue. Note the new modified demo file will give the results with lower accuracy compared with the original one (calculated by demo_DNILMF_old.R).
+
+
 2017-07-18
 
 Add two cpp functions (sigmoid.cpp and log1pexp.cpp) for numerical stability.
