@@ -2,7 +2,9 @@
 
 2021-04-09
 
-I modified the demo_DNILMF.R file which originally used the information at time (t - 1) when computing similarity matrix at time t in cv. The better way is to compute similarity matrix in each fold independently thanks to Dr. Soheil Jahangiri who noted this issue. Note the new modified demo file will give the results with lower accuracy compared with the original one (calculated by demo_DNILMF_old.R).
+I modified the demo_DNILMF.R file which originally used the information at time (t - 1) when computing similarity matrix at time t in cv. The better way is to compute similarity matrix in each fold independently thanks to Dr. Soheil Jahangiri who noted this issue. Note the new modified demo file will give the results with lower accuracy compared with the original one (calculated by demo_DNILMF_old.R). Other demo files were also modified accordingly.
+
+One should try to tune the parameters to see if better performance can be achived.
 
 
 2017-07-18
