@@ -152,10 +152,12 @@ for (i in 1:numSplit) {
     Yc <- inferZeros(t(Y), st, K = K1)
     KgipD <- fastKgipMat(Yr, 1)
     KgipT <- fastKgipMat(Yc, 1)
+    ################################################
     ## nNeig = 3, nIter = 2
-    sd <- fastKF(KgipD, sd, 3, 2)
-    st <- fastKF(KgipT, st, 3, 2)
-    lap <- constrNeig(sd, st, K = K1)
+    sd_temp <- fastKF(KgipD, sd, 3, 2)
+    st_temp <- fastKF(KgipT, st, 3, 2)
+    lap <- constrNeig(sd_temp, st_temp, K = K1)
+    ################################################
     lapD <- lap$lapD
     lapT <- lap$lapT
     simD <- lap$simD
