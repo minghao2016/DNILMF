@@ -6,6 +6,11 @@
 ## rm(list = ls())
 ## setwd("YourDir\\DNILMF")
 
+
+if (TRUE) {stop("Please do not use this demo file due to information leak in the loop {sd, st}!", "\n")}
+
+
+
 # current data set name
 db <- "gpcr"
 
@@ -156,10 +161,16 @@ for (i in 1:numSplit) {
     Yc <- inferZeros(t(Y), st, K = K1)
     KgipD <- fastKgipMat(Yr, 1)
     KgipT <- fastKgipMat(Yc, 1)
+    
+    #########################################################################
+    if (TRUE) {stop("Below sd and st are causing information leak!", "\n")}
     # nNeig = 3, nIter = 2
     sd <- fastKF(KgipD, sd, 3, 2)
     st <- fastKF(KgipT, st, 3, 2)
     lap <- constrNeig(sd, st, K = K1)
+    if (TRUE) {stop("Above sd and st are causing information leak!", "\n")}
+    #########################################################################
+    
     lapD <- lap$lapD
     lapT <- lap$lapT
     simD <- lap$simD
