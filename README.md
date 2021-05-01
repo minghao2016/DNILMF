@@ -6,7 +6,7 @@ I modified the demo_DNILMF.R file which originally used the information at time 
 
 One should try to tune the parameters to see if better performance can be achived.
 
-I believe that both ['similarity fusion method'](doi:10.1038/nMeth.2810) and ['Social Trust Ensemble'](https://doi.org/10.1145/157) from the recommender system domain are valuable techniques for drug-target interaction prediction. Interesting researchers may consider them in their prediction tasks.
+I believe that both ['similarity fusion method'](https://www.nature.com/articles/nmeth.2810) and ['Social Trust Ensemble'](https://dl.acm.org/doi/10.1145/1571941.1571978) from the recommender system domain are valuable techniques for drug-target interaction prediction. Interesting researchers may consider them in their prediction tasks.
 
 
 2017-07-18
